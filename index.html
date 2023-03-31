@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" dir="rtl">
+  <head>
+    <link rel="icon" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Ropa GUZZOin</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="Logo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css" integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+    <link rel="stylesheet" href="LCompras.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Lista de Compras</a>
+            <ul id="lista-compras"></ul>
+          </li>
+          <li><a href="#">Ropa de Mujer</a></li>
+          <li><a href="#">Ropa Niño/a</a></li>
+          <li><a href="#">Ropa Interior</a></li>
+          <li><a href="#">Contacto (+54 2665 117811)</a></li>
+        </ul>
+      </nav>
+    </header>    
+    
+    <main>
+      <section>
+        <h1>Ropa de Mujer</h1>
+        <div class="product">
+          <img src="Calza Larga.jpg" alt="Calzas Largas | GUZZOin" height="200" width="200">
+          <h2>Calzas Largas</h2>
+          <p class="price">$3500.00</p>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+        <div class="product">
+          <img src="Calza Corta.jpg" alt="Calzas Cortas | GUZZOin" height="200" width="200">
+          <h2>Calzas Cortas</h2>
+          <p class="price">$2000.00</p>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Todos los derechos reservados - @GUZZOIN 2023</p> 
+      <img src="Logo.png" alt="Logo de la empresa" style="width: 200px; height: 200px;">
+    </footer>
+    <script>
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          if (confirm('¿Desea añadir este producto al carrito?')) {
+            alert('El producto ha sido añadido al carrito.');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
